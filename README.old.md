@@ -1,2 +1,0 @@
-# ortoo-app
-ortoo-app
