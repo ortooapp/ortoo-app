@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
 import "./ProductList.css";
@@ -87,18 +87,22 @@ const ProductList = () => {
 
                 {files.length === 1
                   ? files.map(file => (
-                      <img
-                        src={file.url}
-                        alt="products"
-                        className="single-product-thumbnail"
-                      />
+                      <div key={file.id}>
+                        <img
+                          src={file.url}
+                          alt="products"
+                          className="single-product-thumbnail"
+                        />
+                      </div>
                     ))
                   : files.map(file => (
-                      <img
-                        src={file.url}
-                        alt="products"
-                        className="product-image"
-                      />
+                      <div key={file.id}>
+                        <img
+                          src={file.url}
+                          alt="products"
+                          className="product-image"
+                        />
+                      </div>
                     ))}
               </div>
               <div className="description tm">{productDescription}</div>
@@ -119,18 +123,23 @@ const ProductList = () => {
 
                 {files.length === 1
                   ? files.map(file => (
-                      <img
-                        src={file.url}
-                        alt="products"
-                        className="single-product-thumbnail"
-                      />
+                      <Fragment key={file.id}>
+                        <img
+                          key={file.id}
+                          src={file.url}
+                          alt="product"
+                          className="single-product-thumbnail"
+                        />
+                      </Fragment>
                     ))
                   : files.map(file => (
-                      <img
-                        src={file.url}
-                        alt="products"
-                        className="product-image"
-                      />
+                      <Fragment key={file.id}>
+                        <img
+                          src={file.url}
+                          alt="products"
+                          className="product-image"
+                        />
+                      </Fragment>
                     ))}
               </div>
             </div>
