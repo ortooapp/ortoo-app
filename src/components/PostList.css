@@ -1,0 +1,29 @@
+.post-card {
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.description {
+  padding-bottom: 8px;
+}
+
+.single-photo {
+  width: 200px;
+  border-radius: 5px;
+}
+
+.single-video {
+  width: 200px;
+  border-radius: 5px;
+}
+
+.post-footer {
+  padding-top: 5px;
+}
+
+.like-button {
+  font-size: 0.9rem;
+  border-radius: 5px;
+}

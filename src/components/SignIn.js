@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
+import { Link } from "react-router-dom";
 
 const SIGN_IN = gql`
   mutation SignUp($email: String!, $password: String!) {
@@ -18,7 +19,6 @@ const SignIn = props => {
 
   return (
     <div>
-      <h3>Sign In</h3>
       <form
         onSubmit={e => {
           e.preventDefault();
@@ -30,21 +30,34 @@ const SignIn = props => {
           );
         }}
       >
+        <h2>登录 Ortoo</h2>
+        <div className="links">
+          没有账号？<Link to="/signup">邮箱注册</Link>
+        </div>
         <input
           type="email"
-          placeholder="Email"
+          placeholder="邮箱"
           value={email}
           onChange={e => setEmail(e.target.value)}
+          className="form-control"
         />
         <br />
         <input
           type="password"
-          placeholder="Password"
+          placeholder="密码"
           value={password}
           onChange={e => setPassword(e.target.value)}
+          className="form-control"
         />
         <br />
-        <button type="submit">Sign In</button>
+        <div className="links">
+          <Link to="#">
+            <span className="text-right">忘记密码?</span>
+          </Link>
+        </div>
+        <button type="submit" className="btn">
+          登录
+        </button>
       </form>
     </div>
   );

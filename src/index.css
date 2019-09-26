@@ -1,13 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@font-face {
+  font-family: "Noto Sans Mongolian";
+  src: url(https://cdn.glitch.com/d1c36ec3-4e0a-401d-9db2-9265e6e169d2%2FNotoSansMongolian-Regular.ttf?1559017132245)
+    format("truetype");
+}
+
+.tm {
+  font-family: "Noto Sans Mongolian";
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  -webkit-text-orientation: sideways-right;
+  text-orientation: sideways-right;
+}
+
+/* Form */
+.btn {
+  background-color: #0084ff;
+  border-radius: 24px;
+  padding: 8px 20px;
+  border: 1px solid #0084ff;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: 0.8rem;
+}
+
+.form-control {
+  background: #f5f5f5;
+  border: none;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 1);
+  font-size: 1rem;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.form-control:focus {
+  outline: none;
+}
+
+.links {
+  padding-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.links a {
+  text-decoration: none;
+  color: #0084ff;
+}
+
+.product-category a {
+  text-decoration: none;
+  color: #484848;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+.loading-container img {
+  height: 32px;
+  width: 32px;
 }
